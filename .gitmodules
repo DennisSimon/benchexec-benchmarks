@@ -1,0 +1,3 @@
+[submodule "new"]
+	path = new
+	url = git@github.com:sosy-lab/benchexec.git

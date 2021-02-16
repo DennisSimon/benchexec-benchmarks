@@ -1,0 +1,5 @@
+node_modules/
+new/
+old/
+cypress/videos
+mochawesome-report
