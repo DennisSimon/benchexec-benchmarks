@@ -5,7 +5,7 @@ const exec = require('child_process').exec;
 const data = [
   'https://buildbot.sosy-lab.org/cpachecker/results/nightly-sv-comp/00226.-r_integration-nightly-sv-comp.2020-10-23_22-05-14.results.xml.bz2',
   'https://buildbot.sosy-lab.org/cpachecker/results/nightly-termination/00208.-r34819_integration-nightly-termination.2020-08-26_22-00-13.results.xml.bz2',
-  'https://buildbot.sosy-lab.org/cpachecker/results/nightly-induction/00201.nightly-induction.table.xml.bz2',
+  'https://buildbot.sosy-lab.org/cpachecker/results/nightly-induction/00201.-r_integration-nightly-induction.2020-12-30_22-00-30.results.xml.bz2',
 ];
 
 const runCommand = async (command, cwd = process.cwd()) => {
