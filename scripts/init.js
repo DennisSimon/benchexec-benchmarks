@@ -2,6 +2,12 @@ const path = require('path');
 
 const exec = require('child_process').exec;
 
+const data = [
+  'https://buildbot.sosy-lab.org/cpachecker/results/nightly-sv-comp/00226.-r_integration-nightly-sv-comp.2020-10-23_22-05-14.results.xml.bz2',
+  'https://buildbot.sosy-lab.org/cpachecker/results/nightly-termination/00208.-r34819_integration-nightly-termination.2020-08-26_22-00-13.results.xml.bz2',
+  'https://buildbot.sosy-lab.org/cpachecker/results/nightly-induction/00201.nightly-induction.table.xml.bz2',
+];
+
 const runCommand = async (command, cwd = process.cwd()) => {
   let cont;
   const promise = new Promise((resolve) => (cont = resolve));
@@ -37,11 +43,11 @@ const run = async () => {
 
   console.log('📂\tCreating test tables...');
   await runCommand(
-    './table-generator https://buildbot.sosy-lab.org/cpachecker/results/nightly-termination/00208.-r34819_integration-nightly-termination.2020-08-26_22-00-13.results.xml.bz2',
+    `./table-generator ${data.join(' ')}`,
     path.resolve('old', 'bin').toString()
   );
   await runCommand(
-    './table-generator https://buildbot.sosy-lab.org/cpachecker/results/nightly-termination/00208.-r34819_integration-nightly-termination.2020-08-26_22-00-13.results.xml.bz2',
+    `./table-generator ${data.join(' ')}`,
     path.resolve('new', 'bin').toString()
   );
   console.log('🚀\tDone');
