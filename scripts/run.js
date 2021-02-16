@@ -22,7 +22,7 @@ const run = async () => {
     headless: 'true',
     env: {
       oldBase: `old/bin/results/${oldVersionFileName}`,
-      newBase: `old/bin/results/${newVersionFileName}`,
+      newBase: `new/bin/results/${newVersionFileName}`,
     },
   });
 

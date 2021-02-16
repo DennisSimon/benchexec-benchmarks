@@ -12,7 +12,7 @@ const runCommand = async (command, cwd = process.cwd()) => {
   let cont;
   const promise = new Promise((resolve) => (cont = resolve));
 
-  exec(command, { cwd }, (error, stdout) => {
+  exec(command, { cwd, maxBuffer: 1024 * 1024 * 10 }, (error, stdout) => {
     if (error) {
       throw new Error(error);
     }
