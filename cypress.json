@@ -1,6 +1,8 @@
 {
   "reporter": "junit",
   "env": {
-    "oldBase": "old/bin/results/00208.-r34819_integration-nightly-termination.2020-08-26_22-00-13.results.html"
-  }
+    "oldBase": "old/bin/results/results.2021-02-16_2256.table.html",
+    "newBase": "new/bin/results/results.2021-02-17_23-35-23.table.html"
+  },
+  "record": false
 }

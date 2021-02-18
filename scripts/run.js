@@ -45,6 +45,9 @@ const run = async () => {
 
     for (const run of json.results[0].suites) {
       for (const { title, duration } of run.tests) {
+        if (title.includes('navigate')) {
+          continue;
+        }
         if (!Array.isArray(buckets[title])) {
           buckets[title] = [];
         }

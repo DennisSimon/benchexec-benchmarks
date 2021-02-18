@@ -27,6 +27,10 @@ const run = async () => {
   await runCommand('git clone https://github.com/sosy-lab/benchexec.git new');
   await runCommand('git clone https://github.com/sosy-lab/benchexec.git old');
   await runCommand('git checkout 99470a', path.resolve('old').toString());
+  await runCommand(
+    'git checkout origin/table-render-test',
+    path.resolve('new').toString()
+  );
   console.log('🏋️\tInstalling node dependencies');
   await runCommand(
     'npm i',
