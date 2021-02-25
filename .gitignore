@@ -5,3 +5,4 @@ cypress/videos
 mochawesome-report
 stat_test/
 template/template.*
+accum_results

@@ -7,7 +7,7 @@ for (let i = 0; i < 10; i++) {
       cy.contains('Table').click();
     });
     it('should filter numeric ranges', () => {
-      cy.get('#0_cputime_1_filter').type('10:800');
+      cy.get('#0_cputime_2_filter').type('10:800');
       cy.contains('Reset Filters');
     });
 
