@@ -4,5 +4,6 @@
     "oldBase": "old/bin/results/results.2021-02-16_2256.table.html",
     "newBase": "new/bin/results/results.2021-02-17_23-35-23.table.html"
   },
-  "record": false
+  "record": false,
+  "video": false
 }
