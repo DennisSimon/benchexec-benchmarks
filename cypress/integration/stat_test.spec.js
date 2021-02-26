@@ -7,7 +7,7 @@ for (let i = 0; i < 10; i++) {
       cy.contains('Table');
     });
     it('should render statistics', () => {
-      cy.contains('545000');
+      cy.get('.rt-table').first().children().contains(/^\d+$/);
     });
   });
 }
