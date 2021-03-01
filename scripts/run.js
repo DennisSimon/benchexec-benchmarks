@@ -7,6 +7,9 @@ const { buildTemplate } = require('../template/buildTemplate');
 
 const maxRows = 80_000;
 const increment = 1_000;
+const startAt = process.env.BENCHMARK_START_AT
+  ? Number(process.env.BENCHMARK_START_AT)
+  : 1000;
 
 const runCommand = async (command, cwd = process.cwd()) => {
   let cont;
@@ -126,7 +129,7 @@ const runSuites = async () => {
 const run = async () => {
   await fs.mkdir(path.resolve('accum_results').toString(), { recursive: true });
 
-  for (let numRows = increment; numRows < maxRows; numRows += increment) {
+  for (let numRows = startAt; numRows < maxRows; numRows += increment) {
     console.log(`Running benchmark with ${numRows} rows`);
     const filePath = await buildTemplate(numRows);
     await Promise.all(
